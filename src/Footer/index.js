@@ -13,10 +13,10 @@ class FooterPage extends React.Component {
                         <Col sm="6">
                             <h5 className="title">Informações de Contato</h5>
                            <ul>
-                            <li className="list-unstyled"><FontAwesomeIcon icon="map"/>R. Joaquim Meier, 854 - Lins de Vasconcelos. Rio de Janeiro - RJ</li>
+                            <li className="list-unstyled"><FontAwesomeIcon icon="map-marker"/>&nbsp;&nbsp;R. Joaquim Meier, 854 - Lins de Vasconcelos. Rio de Janeiro - RJ</li>
                     
-                            <li className="list-unstyled"><FontAwesomeIcon icon="phone"/>(21) 2597-5999</li>
-                            <li className="list-unstyled"><FontAwesomeIcon icon="envelope"/>contato@geriatriacoracaodemaria</li>
+                            <li className="list-unstyled"><FontAwesomeIcon icon="phone"/>&nbsp;&nbsp;(21) 2597-5999</li>
+                            <li className="list-unstyled"><FontAwesomeIcon icon="envelope"/>&nbsp;&nbsp;contato@geriatriacoracaodemaria</li>
                             </ul>
                         </Col>
                         {/* <Col sm="6">
