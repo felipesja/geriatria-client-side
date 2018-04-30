@@ -18,20 +18,30 @@ export class MapContainer extends Component {
 
     constructor(props) {
         super(props);
-        this.onMarkerClick = this.onMarkerClick.bind(this);
         this.state = {
-            showingInfoWindow: true,
+            showingInfoWindow: false,
             activeMarker: {},
             selectedPlace: {}
         };
     }
 
+    componentDidMount(){
+        window.addEventListener('load', this.onMarkerClick);
+    }
+    
     onMarkerClick = (props, marker, e) =>
         this.setState({
             selectedPlace: props,
             activeMarker: marker,
             showingInfoWindow: true
         });
+
+    onInfoWindowClose = () =>
+        this.setState({
+            showingInfoWindow: false,
+            activeMarker: null
+        });
+
 
     render() {
         return (
@@ -44,11 +54,12 @@ export class MapContainer extends Component {
                     lng: -43.2823285
                 }}
             >
-                <Marker onLoad={this.onMarkerClick}
-                    name={'Lar Geriátrico Coração de Mária'} />
+                <Marker onClick={this.onMarkerClick} name={'Lar Geriátrico Coração de Mária'} />
                 <InfoWindow
                     marker={this.state.activeMarker}
-                    visible={this.state.showingInfoWindow}>
+                    visible={this.state.showingInfoWindow}
+                    onClose={this.onInfoWindowClose}
+                    position={{lat: -22.907070, lng: -43.282330}} >
                     <div>
                         <strong>Endereço: </strong>R. Joaquim Meier, 854 - Lins de Vasconcelos<br></br>
                         <strong>Telefone: </strong> (21) 2597-5999<br></br>
@@ -61,5 +72,6 @@ export class MapContainer extends Component {
 }
 
 export default GoogleApiWrapper({
-    apiKey: ("**Api Key Google Maps Here**")
+    apiKey: ("**Api Key Google Maps Here**"),
+    language: ("pt-BR")
 })(MapContainer)
