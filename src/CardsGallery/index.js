@@ -20,8 +20,8 @@ class CardGallery extends Component {
                     <div className="row">
                         <div className="col-md-6 col-lg-4">
                             <div className="card border-0 transform-on-hover">
-                                <a className="lightbox" href={images['image1.jpg']}>
-                                    <img src={images['image1.jpg']} className="card-img-top"></img>
+                                <a className="lightbox" href={images['IMG-20180430-WA0005.jpg']}>
+                                    <img src={images['IMG-20180430-WA0005.jpg']} className="card-img-top"></img>
                                 </a>
                                 <div className="card-body">
                                     <h6><a href="#">Lorem Ipsum</a></h6>
@@ -31,8 +31,8 @@ class CardGallery extends Component {
                         </div>
                         <div className="col-md-6 col-lg-4">
                             <div className="card border-0 transform-on-hover">
-                                <a className="lightbox" href={images['image2.jpg']}>
-                                    <img src={images['image2.jpg']} className="card-img-top"></img>
+                                <a className="lightbox" href={images['IMG-20180430-WA0006.jpg']}>
+                                    <img src={images['IMG-20180430-WA0006.jpg']} className="card-img-top"></img>
                                 </a>
                                 <div className="card-body">
                                     <h6><a href="#">Lorem Ipsum</a></h6>
@@ -42,8 +42,8 @@ class CardGallery extends Component {
                         </div>
                         <div className="col-md-6 col-lg-4">
                             <div className="card border-0 transform-on-hover">
-                                <a className="lightbox" href={images['image3.jpg']}>
-                                    <img src={images['image3.jpg']} className="card-img-top"></img>
+                                <a className="lightbox" href={images['IMG-20180430-WA0007.jpg']}>
+                                    <img src={images['IMG-20180430-WA0007.jpg']} className="card-img-top"></img>
                                 </a>
                                 <div className="card-body">
                                     <h6><a href="#">Lorem Ipsum</a></h6>
@@ -53,8 +53,8 @@ class CardGallery extends Component {
                         </div>
                         <div className="col-md-6 col-lg-4">
                             <div className="card border-0 transform-on-hover">
-                                <a className="lightbox" href={images['image4.jpg']}>
-                                    <img src={images['image4.jpg']} className="card-img-top"></img>
+                                <a className="lightbox" href={images['IMG-20180430-WA0008.jpg']}>
+                                    <img src={images['IMG-20180430-WA0008.jpg']} className="card-img-top"></img>
                                 </a>
                                 <div className="card-body">
                                     <h6><a href="#">Lorem Ipsum</a></h6>
@@ -64,8 +64,8 @@ class CardGallery extends Component {
                         </div>
                         <div className="col-md-6 col-lg-4">
                             <div className="card border-0 transform-on-hover">
-                                <a className="lightbox" href={images['image5.jpg']}>
-                                    <img src={images['image5.jpg']}  className="card-img-top"></img>
+                                <a className="lightbox" href={images['IMG-20180430-WA0009.jpg']}>
+                                    <img src={images['IMG-20180430-WA0009.jpg']}  className="card-img-top"></img>
                                 </a>
                                 <div className="card-body">
                                     <h6><a href="#">Lorem Ipsum</a></h6>

@@ -62,7 +62,7 @@ export class MapContainer extends Component {
                     position={{lat: -22.907070, lng: -43.282330}} >
                     <div>
                         <strong>Endereço: </strong>R. Joaquim Meier, 854 - Lins de Vasconcelos<br></br>
-                        <strong>Telefone: </strong> (21) 2597-5999<br></br>
+                        <strong>Telefone: </strong> (21)3899-9938<br></br>
                         <strong>Funcionamento: </strong> 8:30 - 19:00 Horas
                     </div>
                 </InfoWindow>

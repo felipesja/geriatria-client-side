@@ -14,20 +14,21 @@ class FooterPage extends React.Component {
                             <h5 className="title">Informações de Contato</h5>
                            <ul>
                             <li className="list-unstyled"><FontAwesomeIcon icon="map-marker"/>&nbsp;&nbsp;R. Joaquim Meier, 854 - Lins de Vasconcelos. Rio de Janeiro - RJ</li>
-                    
-                            <li className="list-unstyled"><FontAwesomeIcon icon="phone"/>&nbsp;&nbsp;(21) 2597-5999</li>
-                            <li className="list-unstyled"><FontAwesomeIcon icon="envelope"/>&nbsp;&nbsp;contato@geriatriacoracaodemaria</li>
+                            <li className="list-unstyled"><FontAwesomeIcon icon="phone"/>&nbsp;&nbsp;(21) 3899-9938&nbsp; | &nbsp;(21) 2597-5999</li>
+                            <li className="list-unstyled"><FontAwesomeIcon icon="envelope"/>&nbsp;&nbsp;largeriatricocoracaodemaria@yahoo.com.br</li>
+                            <li className="list-unstyled"><FontAwesomeIcon icon="clock"/>&nbsp;&nbsp;8:30 às 19:00 Horas</li>
                             </ul>
                         </Col>
-                        {/* <Col sm="6">
-                            <h5 className="title">Links</h5>
+                        <Col sm="6">
+                            <h5 className="title">Profissionais Disponíveis</h5>
                             <ul>
-                                <li className="list-unstyled"><a href="#!">Link 1</a></li>
-                                <li className="list-unstyled"><a href="#!">Link 2</a></li>
-                                <li className="list-unstyled"><a href="#!">Link 3</a></li>
-                                <li className="list-unstyled"><a href="#!">Link 4</a></li>
+                                <li className="list-unstyled">Médico&nbsp; | &nbsp;Enfermagem&nbsp; | &nbsp;Psicólogo&nbsp; | &nbsp;Assistente Social&nbsp; | &nbsp;Recreação&nbsp; | &nbsp;Ludoterapia&nbsp;</li>
                             </ul>
-                        </Col> */}
+                            <h5 className="title">Serviços Disponíveis</h5>
+                            <ul>
+                                <li className="list-unstyled">Quartos&nbsp; | &nbsp;Enfermarias&nbsp; | &nbsp;Suites&nbsp; | &nbsp;Mensal&nbsp; | &nbsp;Diárias&nbsp; | &nbsp;Fins de Semana</li>
+                            </ul>
+                        </Col>
                     </Row>
                 </Container>
                 <div className="footer-copyright text-center">
