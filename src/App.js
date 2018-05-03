@@ -4,7 +4,7 @@ import Navbar from './NavBar';
 import CarouselPage from './CarouselPage';
 import CardGallery from './CardsGallery';
 import GoogleMaps from './GoogleMaps';
-import Contact from './modules/Contact/containers'
+import Contact from './modules/Contact/containers';
 //import FormContato from './FormContato';
 import './App.css';
 
@@ -16,13 +16,11 @@ class App extends Component {
         <header className="header-App">
           <Navbar />
         </header>
-        <div className="divBody">
-          <CarouselPage />
-          <CardGallery />
-            <Contact />
-          <GoogleMaps />
-          <Footer />
-        </div>
+        <CarouselPage />
+        <CardGallery />
+        <Contact />
+        <GoogleMaps />
+        <Footer />
       </div>
     );
   }
