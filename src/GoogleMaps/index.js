@@ -21,14 +21,16 @@ export class MapContainer extends Component {
         this.state = {
             showingInfoWindow: false,
             activeMarker: {},
-            selectedPlace: {}
+            selectedPlace: {},
+            center: { lat: -22.9085527, lng: -43.2823285 }
         };
     }
 
-    componentDidMount(){
+    componentDidMount() {
         window.addEventListener('load', this.onMarkerClick);
+        window.addEventListener('resize', this.setMapCenter);
     }
-    
+
     onMarkerClick = (props, marker, e) =>
         this.setState({
             selectedPlace: props,
@@ -42,6 +44,10 @@ export class MapContainer extends Component {
             activeMarker: null
         });
 
+    setMapCenter = () => {
+        // pull out latitude longitude from wherever you're getting it from
+        this.setState({ center: { lat: -22.9085527, lng: -43.2823285 } });
+    };
 
     render() {
         return (
@@ -49,17 +55,15 @@ export class MapContainer extends Component {
                 zoom={15}
                 style={style}
                 containerStyle={containerStyle}
-                initialCenter={{
-                    lat: -22.9085527,
-                    lng: -43.2823285
-                }}
+                initialCenter={this.state.center}
+                center={this.state.center}
             >
-                <Marker onClick={this.onMarkerClick} name={'Lar Geriátrico Coração de Mária'} />
+                <Marker onClick={this.onMarkerClick} name={'Lar Geriátrico Coração de Mária'}/>
                 <InfoWindow
                     marker={this.state.activeMarker}
                     visible={this.state.showingInfoWindow}
                     onClose={this.onInfoWindowClose}
-                    position={{lat: -22.907070, lng: -43.282330}} >
+                    position={{ lat: -22.907070, lng: -43.282330 }} >
                     <div>
                         <strong>Endereço: </strong>R. Joaquim Meier, 854 - Lins de Vasconcelos<br></br>
                         <strong>Telefone: </strong> (21)3899-9938<br></br>

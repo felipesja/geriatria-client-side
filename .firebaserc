@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "geriatria-da274"
+    "default": "geriatria-a7779",
+    "geriatria": "geriatria-a7779"
   }
 }

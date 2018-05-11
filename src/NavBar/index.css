@@ -1,0 +1,24 @@
+.container-navbar {
+    margin-top: 0px!important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.4rem!important;
+    text-transform: uppercase;
+}
+
+.navbar-nav {
+    font-weight: thin;
+    font-size: 1.1rem!important;
+    font-family: 'Roboto', sans-serif;
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-weight: bold;
+        font-size: 0rem!important;
+        text-transform: uppercase;
+        text-align: center!important;
+    }
+}

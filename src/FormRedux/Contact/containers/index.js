@@ -16,16 +16,11 @@ class Contact extends Component {
     const { data } = this.props
 
     return (
-      <div className="container">
-        <div id="row-form" className="row">
-          <div className="col-md-8 col-md-offset-2">
-            <div className="row text-center">
-              <h2>Contato</h2>
-            </div>
-            <Form onSubmit={this.handleSubmit} />
-            {/* <div>Form data: {data ? JSON.stringify(data) : null}</div> */}
-          </div>
-        </div>
+      <div className="container text-center">
+        <h2 className="h2-titulo">Contato</h2>
+        <div className="titulo-descricao">Entre em contato utilizando o formulário abaixo</div>
+        <Form onSubmit={this.handleSubmit} />
+        <div hidden>Form data: {data ? JSON.stringify(data) : null}</div>
       </div>
     )
   }

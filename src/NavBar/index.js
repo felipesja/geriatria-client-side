@@ -1,6 +1,8 @@
-import React from 'react';
-import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React from 'react'
+import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Container, Dropdown, DropdownMenu, DropdownToggle, DropdownItem } from 'mdbreact'
+import { BrowserRouter as Router } from 'react-router-dom'
+import imgLogo from './img/Logo branco - transp teste 100.png'
+import './index.css'
 
 class NavbarFeatures extends React.Component {
     constructor(props) {
@@ -8,7 +10,7 @@ class NavbarFeatures extends React.Component {
         this.state = {
             collapse: false,
             isWideEnough: false,
-            dropdownOpen: true
+            dropdownOpen: false
         };
         this.onClick = this.onClick.bind(this);
         this.toggle = this.toggle.bind(this);
@@ -29,22 +31,36 @@ class NavbarFeatures extends React.Component {
     render() {
         return (
             <Router>
-                <Navbar dark color="warning-color" expand="md" fixed='top'>
-                    <NavbarBrand href="/">Geriatria Coração de Mária</NavbarBrand>
-                    {!this.state.isWideEnough && <NavbarToggler onClick={this.onClick} />}
-                    <Collapse isOpen={this.state.collapse} navbar>
-                        <NavbarNav right>
-                            <NavItem>
-                                <NavLink to="/">Home</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink to="#">Contato</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink to="#">Sobre</NavLink>
-                            </NavItem>
-                        </NavbarNav>
-                    </Collapse>
+                <Navbar dark color="orange lighten-2" expand="md" fixed='top'>
+                    <Container className="container-navbar">
+                        <NavbarBrand className="navbar-brand" href="/"><img src={imgLogo} /> Lar Geriátrico Coração de Mária</NavbarBrand>
+                        {!this.state.isWideEnough && <NavbarToggler onClick={this.onClick} />}
+                        <Collapse isOpen={this.state.collapse} navbar>
+                            <NavbarNav className="navbar-nav" right>
+                                <NavItem>
+                                    <NavLink to="/">Home</NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink to="#">Serviços</NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink to="#">Contato</NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink to="#">Localização</NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+                                        <DropdownToggle nav caret>Informações</DropdownToggle>
+                                        <DropdownMenu>
+                                            <DropdownItem href="#">Sobre</DropdownItem>
+                                            <DropdownItem href="#">Depoimentos</DropdownItem>
+                                        </DropdownMenu>
+                                    </Dropdown>
+                                </NavItem>
+                            </NavbarNav>
+                        </Collapse>
+                    </Container>
                 </Navbar>
             </Router>
         );

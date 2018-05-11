@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './index.css';
+import './../App.css';
 
 function importAll(r) {
     let images = {};
@@ -15,7 +16,8 @@ class CardGallery extends Component {
             <section className="gallery-block cards-gallery">
                 <div className="container">
                     <div className="heading">
-                        <h2>Nossos Serviços</h2>
+                        <h2 className="h2-titulo">Serviços Disponíveis</h2>
+                        <div className="titulo-descricao">Clique nos cartões para visualizar mais fotos</div>
                     </div>
                     <div className="row">
                         <div className="col-md-6 col-lg-4">
