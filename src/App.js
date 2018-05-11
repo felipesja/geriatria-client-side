@@ -4,7 +4,7 @@ import Navbar from './NavBar';
 import CarouselPage from './CarouselPage';
 import CardGallery from './CardsGallery';
 import GoogleMaps from './GoogleMaps';
-import Contact from './modules/Contact/containers';
+import Contact from './FormRedux/Contact/containers';
 //import FormContato from './FormContato';
 import './App.css';
 

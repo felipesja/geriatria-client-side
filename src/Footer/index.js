@@ -1,14 +1,13 @@
 import React from 'react';
 import { Col, Container, Row, Footer } from 'mdbreact';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-
 import './index.css';
 
 class FooterPage extends React.Component {
     render() {
         return (
-            <Footer id="footer" color="special-color-dark" className="font-small pt-4">
-                <Container className="text-left">
+            <Footer id="footer" color="special-color-dark" className="font-small pt-1">
+                <Container className="text-left pb-3">
                     <Row>
                         <Col sm="6">
                             <h5 className="title">Informações de Contato</h5>

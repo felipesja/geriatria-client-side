@@ -1,7 +1,7 @@
 .gallery-block{
-	padding-bottom: 60px;
-  padding-top: 60px;
-  background-color:#FCAD59;
+	padding-bottom: 30px;
+  padding-top: 20px;
+  background-color:#ffb74d ;
 }
 
 .gallery-block .heading{
@@ -11,7 +11,7 @@
 
 .gallery-block .heading h2{
     font-weight: bold;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
 }
 

@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import fontawesome from '@fortawesome/fontawesome';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import brands from '@fortawesome/fontawesome-free-brands';
 import solid from '@fortawesome/fontawesome-free-solid';
 import regular from '@fortawesome/fontawesome-free-regular';
@@ -12,7 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import './index.css';
 import {Provider} from 'react-redux';
-import {store} from './modules';
+import {store} from './FormRedux';
 
 fontawesome.library.add(brands, solid, regular)
 
