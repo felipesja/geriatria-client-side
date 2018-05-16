@@ -26,8 +26,8 @@ class CardGallery extends Component {
                                     <img src={images['IMG-20180430-WA0005.jpg']} className="card-img-top"></img>
                                 </a>
                                 <div className="card-body">
-                                    <h6><a href="#">Lorem Ipsum</a></h6>
-                                    <p className="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
+                                    <h6><a href="#">Quartos</a></h6>
+                                    <p className="text-muted card-text">Fotos em breve...</p>
                                 </div>
                             </div>
                         </div>
@@ -37,8 +37,8 @@ class CardGallery extends Component {
                                     <img src={images['IMG-20180430-WA0006.jpg']} className="card-img-top"></img>
                                 </a>
                                 <div className="card-body">
-                                    <h6><a href="#">Lorem Ipsum</a></h6>
-                                    <p className="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
+                                    <h6><a href="#">Enfermaria</a></h6>
+                                    <p className="text-muted card-text">Fotos em breve...</p>
                                 </div>
                             </div>
                         </div>
@@ -48,8 +48,8 @@ class CardGallery extends Component {
                                     <img src={images['IMG-20180430-WA0007.jpg']} className="card-img-top"></img>
                                 </a>
                                 <div className="card-body">
-                                    <h6><a href="#">Lorem Ipsum</a></h6>
-                                    <p className="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
+                                    <h6><a href="#">Suites</a></h6>
+                                    <p className="text-muted card-text">Fotos em breve...</p>
                                 </div>
                             </div>
                         </div>
@@ -59,8 +59,8 @@ class CardGallery extends Component {
                                     <img src={images['IMG-20180430-WA0008.jpg']} className="card-img-top"></img>
                                 </a>
                                 <div className="card-body">
-                                    <h6><a href="#">Lorem Ipsum</a></h6>
-                                    <p className="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
+                                    <h6><a href="#">Recreação</a></h6>
+                                    <p className="text-muted card-text">Fotos em breve...</p>
                                 </div>
                             </div>
                         </div>
@@ -70,8 +70,8 @@ class CardGallery extends Component {
                                     <img src={images['IMG-20180430-WA0009.jpg']}  className="card-img-top"></img>
                                 </a>
                                 <div className="card-body">
-                                    <h6><a href="#">Lorem Ipsum</a></h6>
-                                    <p className="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
+                                    <h6><a href="#">Ludoterapia</a></h6>
+                                    <p className="text-muted card-text">Fotos em breve...</p>
                                 </div>
                             </div>
                         </div>
@@ -81,8 +81,8 @@ class CardGallery extends Component {
                                     <img src={images['image6.jpg']}  className="card-img-top"></img>
                                 </a>
                                 <div className="card-body">
-                                    <h6><a href="#">Lorem Ipsum</a></h6>
-                                    <p className="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
+                                    <h6><a href="#">Fotos Gerais</a></h6>
+                                    <p className="text-muted card-text">Fotos em breve...</p>
                                 </div>
                             </div>
                         </div>

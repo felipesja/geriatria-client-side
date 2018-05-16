@@ -1,7 +1,8 @@
 .gallery-block{
 	padding-bottom: 30px;
   padding-top: 20px;
-  background-color:#ffb74d ;
+  background-color:#ffb74d;
+  color: darkslategrey;
 }
 
 .gallery-block .heading{
