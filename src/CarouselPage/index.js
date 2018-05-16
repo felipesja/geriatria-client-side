@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import './index.css';
 import imgBanner from './img/banner teste 1600x800.png'
-
 import { Carousel, CarouselControl, CarouselInner, CarouselItem, CarouselIndicators, CarouselIndicator } from 'mdbreact';
 
-class ThumbnailsCarouselPage extends Component {
+class CarouselPage extends Component {
   constructor(props) {
     super(props);
     this.next = this.next.bind(this);
@@ -46,7 +45,6 @@ class ThumbnailsCarouselPage extends Component {
     const { activeItem } = this.state;
     return (
         <Carousel
-          thumbnails
           activeItem={this.state.activeItem}
           next={this.next}
           className="z-depth-1">
@@ -67,13 +65,13 @@ class ThumbnailsCarouselPage extends Component {
           <CarouselControl direction="prev" role="button" onClick={() => { this.prev(); }} />
           <CarouselControl direction="next" role="button" onClick={() => { this.next(); }} />
           <CarouselIndicators>
-            <CarouselIndicator img="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(88).jpg" active={activeItem === 1 ? true : false} onClick={() => { this.goToIndex(1); }}></CarouselIndicator>
-            <CarouselIndicator img="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(121).jpg" active={activeItem === 2 ? true : false} onClick={() => { this.goToIndex(2); }}></CarouselIndicator>
-            <CarouselIndicator img="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(31).jpg" active={activeItem === 3 ? true : false} onClick={() => { this.goToIndex(3); }}></CarouselIndicator>
+            <CarouselIndicator  active={activeItem === 1 ? true : false} onClick={() => { this.goToIndex(1); }}></CarouselIndicator>
+            <CarouselIndicator  active={activeItem === 2 ? true : false} onClick={() => { this.goToIndex(2); }}></CarouselIndicator>
+            <CarouselIndicator  active={activeItem === 3 ? true : false} onClick={() => { this.goToIndex(3); }}></CarouselIndicator>
           </CarouselIndicators>
         </Carousel>
     );
   }
 }
 
-export default ThumbnailsCarouselPage;
+export default CarouselPage;
