@@ -19,6 +19,7 @@
     "react-dom": "^16.3.2",
     "react-files": "^2.4.5",
     "react-redux": "^5.0.7",
+    "react-router-hash-link": "^1.2.0",
     "react-scripts": "1.1.4",
     "react-scrollable-anchor": "^0.6.1",
     "redux": "^4.0.0",
