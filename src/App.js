@@ -1,32 +1,36 @@
 import React, { Component } from 'react';
-import Footer from './Footer';
 import Navbar from './NavBar';
 import CarouselPage from './CarouselPage';
 import CardGallery from './CardsGallery';
 import GoogleMaps from './GoogleMaps';
 import Contact from './FormRedux/Contact/containers';
+import Footer from './Footer';
 import './App.css';
-import ScrollableAnchor from 'react-scrollable-anchor'
+import { BrowserRouter as Router } from 'react-router-dom';
+
 
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <Navbar />
-        <header className="header-App"></header>
-        <CarouselPage />
-        <ScrollableAnchor id={'Servicos'}>
-          <CardGallery />
-        </ScrollableAnchor>
-        <ScrollableAnchor id={'Contato'}>
+      <Router>
+        <div>
+          <section id='header'>
+            <Navbar />
+            <header className="header-App"></header>
+          </section>
+          <CarouselPage />
+          <section id='galeria'>
+            <CardGallery />
+          </section>
+          <section id='contato'></section>
           <Contact />
-        </ScrollableAnchor>
-        <ScrollableAnchor id={'Localizacao'}>
-          <GoogleMaps />
-        </ScrollableAnchor>
-        <Footer />
-      </div>
+          <section id="googlemaps">
+            <GoogleMaps />
+          </section>
+          <Footer />
+        </div>
+      </Router>
     );
   }
 }
