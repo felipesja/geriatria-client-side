@@ -10,11 +10,9 @@ import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import './index.css';
-import {Provider} from 'react-redux';
-import {store} from './FormRedux';
 
 fontawesome.library.add(brands, solid, regular)
 
-ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 
 registerServiceWorker();

@@ -3,7 +3,7 @@ import Navbar from './NavBar';
 import CarouselPage from './CarouselPage';
 import CardGallery from './CardsGallery';
 import GoogleMaps from './GoogleMaps';
-import Contact from './FormRedux/Contact/containers';
+import Contact from './ContactForm'
 import Footer from './Footer';
 import './App.css';
 import { BrowserRouter as Router } from 'react-router-dom';
