@@ -34,7 +34,7 @@ class NavbarFeatures extends React.Component {
         return (
             <Navbar dark color="orange lighten-2" expand="md" fixed='top' scrolling>
                 <Container className="container-navbar">
-                    <NavbarBrand className="navbar-brand" href="/"><img src={imgLogo} /> Lar Geriátrico Coração de Mária</NavbarBrand>
+                    <NavbarBrand className="navbar-brand" href="/"><img src={imgLogo} alt="logo" /> Lar Geriátrico Coração de Mária</NavbarBrand>
                     {!this.state.isWideEnough && <NavbarToggler onClick={this.onClick} />}
                     <Collapse isOpen={this.state.collapse} navbar>
                         <NavbarNav className="navbar-nav" right>
