@@ -45,9 +45,10 @@ class Form extends React.Component {
       }
     })
 
-    // axios.post('https://us-central1-geriatria-a7779.cloudfunctions.net/enviarEmail', { name, email, telefone, message })
+    // axios.post('http://localhost:5000/geriatria-a7779/us-central1/enviarEmail', { name, email, telefone, message })
     // Teste!!
-    axios.post('http://localhost:5000/geriatria-a7779/us-central1/enviarEmail', { name, email, telefone, message })
+    
+    axios.post('https://us-central1-geriatria-a7779.cloudfunctions.net/enviarEmail', { name, email, telefone, message })
       .then(result => {
         console.log('Request success: ' + result);
         swal({
