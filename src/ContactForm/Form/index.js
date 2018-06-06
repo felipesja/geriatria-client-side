@@ -1,6 +1,5 @@
 import React from 'react'
 import './index.css'
-// import FormData from 'form-data'
 import axios from 'axios'
 
 class Form extends React.Component {
@@ -9,8 +8,8 @@ class Form extends React.Component {
     this.state = {
       telefone: '',
       name: '',
-      email:'',
-      message:''
+      email: '',
+      message: ''
     };
     this.telefoneAnt = '';
   }
@@ -46,27 +45,25 @@ class Form extends React.Component {
   }
 
   handleSubmit = (e) => {
-    
+
     // get our form data out of state
     const { name, email, telefone, message } = this.state;
 
-    axios.post('https://us-central1-geriatria-a7779.cloudfunctions.net/enviarEmail', { name, email, telefone, message })
+    // axios.post('https://us-central1-geriatria-a7779.cloudfunctions.net/enviarEmail', { name, email, telefone, message })
     // Teste!!
-    // axios.post('http://localhost:5000/geriatria-a7779/us-central1/enviarEmail', { name, email, telefone, message }) 
+    axios.post('http://localhost:5000/geriatria-a7779/us-central1/enviarEmail', { name, email, telefone, message })
       .then(result => {
         console.log('Request success: ' + result);
         alert("Mensagem enviada com sucesso" + result);
       }).catch(error => {
         console.error('Request Error: ' + error);
       })
-    
-      e.preventDefault();
+
+    e.preventDefault();
   }
 
 
   render() {
-
-    //const email = this.state;
 
     return (
       <form className="form-horizontal" onSubmit={this.handleSubmit} onReset={this.handleFormReset}>
