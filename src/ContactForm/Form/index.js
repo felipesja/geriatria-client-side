@@ -45,9 +45,10 @@ class Form extends React.Component {
       }
     })
 
-    // axios.post('https://**url**.cloudfunctions.net/enviarEmail', { name, email, telefone, message })
+    // axios.post('http://localhost:5000/enviarEmail', { name, email, telefone, message })
     // Teste!!
-    axios.post('http://localhost:5000/enviarEmail', { name, email, telefone, message })
+    
+    axios.post('https://**url**.cloudfunctions.net/enviarEmail', { name, email, telefone, message })
       .then(result => {
         console.log('Request success: ' + result);
         swal({
