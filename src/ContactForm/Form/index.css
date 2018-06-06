@@ -6,3 +6,9 @@
     margin: auto;
     margin-bottom: 30px;
 }
+
+.btn-primary {
+    width: 110px;
+    padding-left:  0px!important;
+    padding-right: 0px!important;
+}

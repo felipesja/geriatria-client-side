@@ -4,13 +4,15 @@ import './../App.css';
 
 function importAll(r) {
     let images = {};
-    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    r.keys().map((item, index) => { return images[item.replace('./', '')] = r(item); });
     return images;
 }
-    
+
 const images = importAll(require.context('./img', false, /\.(png|jpe?g|svg)$/));
 
+
 class CardGallery extends Component {
+
     render() {
         return (
             <section className="gallery-block cards-gallery">
@@ -23,10 +25,10 @@ class CardGallery extends Component {
                         <div className="col-md-6 col-lg-4">
                             <div className="card border-0 transform-on-hover">
                                 <a className="lightbox" href={images['IMG-20180430-WA0005.jpg']}>
-                                    <img src={images['IMG-20180430-WA0005.jpg']} className="card-img-top"></img>
+                                    <img src={images['IMG-20180430-WA0005.jpg']} alt='Card Serviço' className="card-img-top"></img>
                                 </a>
                                 <div className="card-body">
-                                    <h6><a href="#">Quartos</a></h6>
+                                    <h6><a href="/">Quartos</a></h6>
                                     <p className="text-muted card-text">Fotos em breve...</p>
                                 </div>
                             </div>
@@ -34,10 +36,10 @@ class CardGallery extends Component {
                         <div className="col-md-6 col-lg-4">
                             <div className="card border-0 transform-on-hover">
                                 <a className="lightbox" href={images['IMG-20180430-WA0006.jpg']}>
-                                    <img src={images['IMG-20180430-WA0006.jpg']} className="card-img-top"></img>
+                                    <img src={images['IMG-20180430-WA0006.jpg']} alt='Card Quarto' className="card-img-top"></img>
                                 </a>
                                 <div className="card-body">
-                                    <h6><a href="#">Enfermaria</a></h6>
+                                    <h6><a href="/">Enfermaria</a></h6>
                                     <p className="text-muted card-text">Fotos em breve...</p>
                                 </div>
                             </div>
@@ -45,10 +47,10 @@ class CardGallery extends Component {
                         <div className="col-md-6 col-lg-4">
                             <div className="card border-0 transform-on-hover">
                                 <a className="lightbox" href={images['IMG-20180430-WA0007.jpg']}>
-                                    <img src={images['IMG-20180430-WA0007.jpg']} className="card-img-top"></img>
+                                    <img src={images['IMG-20180430-WA0007.jpg']} alt='Card Enfermaria' className="card-img-top"></img>
                                 </a>
                                 <div className="card-body">
-                                    <h6><a href="#">Suites</a></h6>
+                                    <h6><a href="/">Suites</a></h6>
                                     <p className="text-muted card-text">Fotos em breve...</p>
                                 </div>
                             </div>
@@ -56,10 +58,10 @@ class CardGallery extends Component {
                         <div className="col-md-6 col-lg-4">
                             <div className="card border-0 transform-on-hover">
                                 <a className="lightbox" href={images['IMG-20180430-WA0008.jpg']}>
-                                    <img src={images['IMG-20180430-WA0008.jpg']} className="card-img-top"></img>
+                                    <img src={images['IMG-20180430-WA0008.jpg']} alt='Card Suites' className="card-img-top"></img>
                                 </a>
                                 <div className="card-body">
-                                    <h6><a href="#">Recreação</a></h6>
+                                    <h6><a href="/">Recreação</a></h6>
                                     <p className="text-muted card-text">Fotos em breve...</p>
                                 </div>
                             </div>
@@ -67,21 +69,21 @@ class CardGallery extends Component {
                         <div className="col-md-6 col-lg-4">
                             <div className="card border-0 transform-on-hover">
                                 <a className="lightbox" href={images['IMG-20180430-WA0009.jpg']}>
-                                    <img src={images['IMG-20180430-WA0009.jpg']}  className="card-img-top"></img>
+                                    <img src={images['IMG-20180430-WA0009.jpg']} alt="Card Recreação" className="card-img-top"></img>
                                 </a>
                                 <div className="card-body">
-                                    <h6><a href="#">Ludoterapia</a></h6>
+                                    <h6><a href="/">Ludoterapia</a></h6>
                                     <p className="text-muted card-text">Fotos em breve...</p>
                                 </div>
                             </div>
                         </div>
                         <div className="col-md-6 col-lg-4">
                             <div className="card border-0 transform-on-hover">
-                                <a className="lightbox" href={images['image6.jpg']}>
-                                    <img src={images['image6.jpg']}  className="card-img-top"></img>
+                                <a className="lightbox" href={images['IMG-20180430-WA0005.jpg']}>
+                                    <img src={images['IMG-20180430-WA0005.jpg']} alt="Card Ludoterapia" className="card-img-top"></img>
                                 </a>
                                 <div className="card-body">
-                                    <h6><a href="#">Fotos Gerais</a></h6>
+                                    <h6><a href="/">Fotos Gerais</a></h6>
                                     <p className="text-muted card-text">Fotos em breve...</p>
                                 </div>
                             </div>
