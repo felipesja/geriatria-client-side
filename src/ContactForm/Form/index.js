@@ -44,9 +44,6 @@ class Form extends React.Component {
         swal.showLoading()
       }
     })
-
-    // axios.post('http://localhost:5000/enviarEmail', { name, email, telefone, message })
-    // Teste!!
     
     axios.post('https://**url**.cloudfunctions.net/enviarEmail', { name, email, telefone, message })
       .then(result => {
