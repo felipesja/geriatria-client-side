@@ -32,7 +32,7 @@ class FooterPage extends React.Component {
                 </Container>
                 <div className="footer-copyright text-center">
                     <Container fluid>
-                        &copy; {(new Date().getFullYear())} Copyright: <a href="https://geriatriacoracaodemaria.com.br"> www.geriatriacoracaodemaria.com.br </a>
+                        &copy; 2018 Copyright: <a href="https://geriatriacoracaodemaria.com.br"> www.geriatriacoracaodemaria.com.br </a>
                     </Container>
                 </div>
             </Footer>
