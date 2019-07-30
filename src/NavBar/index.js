@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, Container, Dropdown, DropdownMenu, DropdownToggle, DropdownItem } from 'mdbreact'
+import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, Container/* , Dropdown, DropdownMenu, DropdownToggle, DropdownItem */ } from 'mdbreact'
 import imgLogo from './img/Logo branco - transp teste 100.png'
 import './index.css'
 import '../hover.css'
@@ -50,7 +50,7 @@ class NavbarFeatures extends React.Component {
                             <NavItem>
                                 <NavLink smooth to="#googlemaps" className="nav-link hvr-underline-from-center">Localização</NavLink>
                             </NavItem>
-                            <NavItem>
+                            {/* <NavItem>
                                 <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
                                     <DropdownToggle nav caret className="hvr-underline-from-center">Informações</DropdownToggle>
                                     <DropdownMenu>
@@ -58,7 +58,7 @@ class NavbarFeatures extends React.Component {
                                         <DropdownItem href="#">Depoimentos</DropdownItem>
                                     </DropdownMenu>
                                 </Dropdown>
-                            </NavItem>
+                            </NavItem> */}
                         </NavbarNav>
                     </Collapse>
                 </Container>
