@@ -57,3 +57,10 @@
 	    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important; 
 	}
 }
+
+.card-img-top{
+    max-width: 350px;
+    max-height: 233px;
+    width: auto;
+    height: auto;
+}

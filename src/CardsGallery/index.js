@@ -1,94 +1,101 @@
 import React, { Component } from 'react';
 import './index.css';
 import './../App.css';
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
 
 function importAll(r) {
-    let images = {};
-    r.keys().map((item, index) => { return images[item.replace('./', '')] = r(item); });
-    return images;
-}
+    return r.keys().map(r);
+  }
 
 const images = importAll(require.context('./img', false, /\.(png|jpe?g|svg)$/));
 
-
 class CardGallery extends Component {
 
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            photoIndex: 0,
+            isOpen: false,
+        };
+    }
+
     render() {
+
+        const { photoIndex, isOpen } = this.state;
+        
         return (
             <section className="gallery-block cards-gallery">
                 <div className="container">
                     <div className="heading">
-                        <h2 className="h2-titulo">Serviços Disponíveis</h2>
-                        <div className="titulo-descricao">Clique nos cartões para visualizar mais fotos</div>
+                        <h2 className="h2-titulo">Serviços Disponíveis</h2>                        
+                        <div className="titulo-descricao">Quartos  |  Enfermarias  |  Suites  |  Mensal  |  Diárias  |  Fins de Semana</div>                        
                     </div>
                     <div className="row">
                         <div className="col-md-6 col-lg-4">
                             <div className="card border-0 transform-on-hover">
-                                <a className="lightbox" href={images['IMG-20180430-WA0005.jpg']}>
-                                    <img src={images['IMG-20180430-WA0005.jpg']} alt='Card Serviço' className="card-img-top"></img>
-                                </a>
-                                <div className="card-body">
-                                    <h6><a href="/">Quartos</a></h6>
-                                    <p className="text-muted card-text">Fotos em breve...</p>
-                                </div>
+                                <a onClick={() => this.setState({ isOpen: true, photoIndex: 0 })}>
+                                     <img src={images[0]} alt='Nosso Espaço' className="card-img-top"></img>
+                                </a>                               
                             </div>
                         </div>
                         <div className="col-md-6 col-lg-4">
                             <div className="card border-0 transform-on-hover">
-                                <a className="lightbox" href={images['IMG-20180430-WA0006.jpg']}>
-                                    <img src={images['IMG-20180430-WA0006.jpg']} alt='Card Quarto' className="card-img-top"></img>
-                                </a>
-                                <div className="card-body">
-                                    <h6><a href="/">Enfermaria</a></h6>
-                                    <p className="text-muted card-text">Fotos em breve...</p>
-                                </div>
+                                <a onClick={() => this.setState({ isOpen: true, photoIndex: 1})}>
+                                    <img src={images[1]} alt='Nosso Espaço' className="card-img-top"></img>
+                                </a>                              
                             </div>
                         </div>
                         <div className="col-md-6 col-lg-4">
                             <div className="card border-0 transform-on-hover">
-                                <a className="lightbox" href={images['IMG-20180430-WA0007.jpg']}>
-                                    <img src={images['IMG-20180430-WA0007.jpg']} alt='Card Enfermaria' className="card-img-top"></img>
-                                </a>
-                                <div className="card-body">
-                                    <h6><a href="/">Suites</a></h6>
-                                    <p className="text-muted card-text">Fotos em breve...</p>
-                                </div>
+                                <a onClick={() => this.setState({ isOpen: true, photoIndex: 2 })}>
+                                    <img src={images[2]} alt='Nosso Espaço' className="card-img-top"></img>
+                                </a>                              
                             </div>
                         </div>
                         <div className="col-md-6 col-lg-4">
                             <div className="card border-0 transform-on-hover">
-                                <a className="lightbox" href={images['IMG-20180430-WA0008.jpg']}>
-                                    <img src={images['IMG-20180430-WA0008.jpg']} alt='Card Suites' className="card-img-top"></img>
-                                </a>
-                                <div className="card-body">
-                                    <h6><a href="/">Recreação</a></h6>
-                                    <p className="text-muted card-text">Fotos em breve...</p>
-                                </div>
+                                <a onClick={() => this.setState({ isOpen: true, photoIndex: 3 })}>
+                                    <img src={images[3]} alt='Nosso Espaço' className="card-img-top"></img>
+                                </a>                            
                             </div>
                         </div>
                         <div className="col-md-6 col-lg-4">
                             <div className="card border-0 transform-on-hover">
-                                <a className="lightbox" href={images['IMG-20180430-WA0009.jpg']}>
-                                    <img src={images['IMG-20180430-WA0009.jpg']} alt="Card Recreação" className="card-img-top"></img>
-                                </a>
-                                <div className="card-body">
-                                    <h6><a href="/">Ludoterapia</a></h6>
-                                    <p className="text-muted card-text">Fotos em breve...</p>
-                                </div>
+                                <a onClick={() => this.setState({ isOpen: true, photoIndex: 4 })}>
+                                    <img src={images[4]} alt="Nosso Espaço" className="card-img-top"></img>
+                                </a>                              
                             </div>
                         </div>
                         <div className="col-md-6 col-lg-4">
                             <div className="card border-0 transform-on-hover">
-                                <a className="lightbox" href={images['IMG-20180430-WA0005.jpg']}>
-                                    <img src={images['IMG-20180430-WA0005.jpg']} alt="Card Ludoterapia" className="card-img-top"></img>
-                                </a>
-                                <div className="card-body">
-                                    <h6><a href="/">Fotos Gerais</a></h6>
-                                    <p className="text-muted card-text">Fotos em breve...</p>
-                                </div>
+                                <a onClick={() => this.setState({ isOpen: true, photoIndex: 7 })}>
+                                    <img src={images[7]} alt="Nosso Espaço" className="card-img-top"></img>
+                                </a>                            
                             </div>
                         </div>
                     </div>
+
+                    {isOpen && (
+                        <Lightbox                         
+                            mainSrc={images[photoIndex]}
+                            nextSrc={images[(photoIndex + 1) % images.length]}
+                            prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+                            onCloseRequest={() => this.setState({ isOpen: false })}
+                            onMovePrevRequest={() =>
+                                this.setState({
+                                    photoIndex: (photoIndex + images.length - 1) % images.length,
+                                })
+                            }
+                            onMoveNextRequest={() =>
+                                this.setState({
+                                    photoIndex: (photoIndex + 1) % images.length,
+                                })
+                            }
+                        />
+                    )}
+
                 </div>
             </section>
         )
