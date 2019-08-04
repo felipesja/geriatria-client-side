@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 import './index.css';
-import {credentials} from './apiKey.js';
 
 const style = {
     width: '100%',
@@ -58,7 +57,7 @@ export class MapContainer extends Component {
                 initialCenter={this.state.center}
                 center={this.state.center}
             >
-                <Marker onClick={this.onMarkerClick} name={'Lar Geriátrico Coração de Mária'}/>
+                <Marker onClick={this.onMarkerClick} name={'Lar Geriátrico Coração de Mária'} />
                 <InfoWindow
                     marker={this.state.activeMarker}
                     visible={this.state.showingInfoWindow}
@@ -76,6 +75,6 @@ export class MapContainer extends Component {
 }
 
 export default GoogleApiWrapper({
-    apiKey: (credentials.apiKey),
+    apiKey: (process.env.REACT_APP_GOOGLE_MAPS_API_KEY),
     language: ("pt-BR")
 })(MapContainer)

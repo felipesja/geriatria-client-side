@@ -24,12 +24,6 @@ class Form extends React.Component {
     this.setState({ telefone: '' });
   }
 
-  // handleChange = (e) => {
-  //   // const state = this.state
-  //   // state[e.target.name] = e.target.value;
-  //   // this.setState(state);
-  // }
-
   handleSubmit = (e) => {
 
     // get our form data out of state
@@ -38,17 +32,17 @@ class Form extends React.Component {
     const email = e.target.email.value
     const message = e.target.message.value
 
-    swal({
+    swal.fire({
       title: 'Enviando...',
       onOpen: () => {
         swal.showLoading()
       }
     })
     
-    axios.post('https://**url**.cloudfunctions.net/enviarEmail', { name, email, telefone, message })
+    axios.post(process.env.REACT_APP_URL_API_PRODUCAO, { name, email, telefone, message })
       .then(result => {
         console.log('Request success: ' + result);
-        swal({
+        swal.fire({
           title: 'Mensagem enviada com sucesso!',
           text: 'Logo em breve entraremos em contato!',
           type: 'success',
@@ -58,7 +52,7 @@ class Form extends React.Component {
 
       }).catch(error => {
         console.error('Request Error: ' + error);
-        swal({
+        swal.fire({
           title: 'Não foi possível enviar a Mensagem!',
           text: 'Entre em contato pelos nossos telefones.',
           type: 'error',
@@ -89,8 +83,7 @@ class Form extends React.Component {
           </div>
 
           <div className="form-buttons">
-            <button type="submit" className="btn btn-primary">Enviar</button>
-            {/* {loading ? <LoadingSpinner /> : <button type="submit" className="btn btn-primary">Enviar</button>} */}
+            <button type="submit" className="btn btn-primary">Enviar</button>            
             <button type="reset" className="btn btn-default">Limpar</button>
           </div>
         </div>

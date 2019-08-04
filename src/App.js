@@ -15,16 +15,16 @@ class App extends Component {
     return (
       <Router>
         <div>
+          <Navbar />
           <section id='header'>
-            <Navbar />
-            <header className="header-App"></header>
+            <CarouselPage />
           </section>
-          <CarouselPage />
           <section id='galeria'>
             <CardGallery />
           </section>
-          <section id='contato'></section>
-          <Contact />
+          <section id='contato'>
+            <Contact />
+          </section>
           <section id="googlemaps">
             <GoogleMaps />
           </section>

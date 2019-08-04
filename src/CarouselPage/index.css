@@ -1,0 +1,9 @@
+.container-carousel {
+    margin-top: 110px!important;    
+}
+
+@media (min-width: 1400px) {
+    .container-carousel {
+        max-width: 1300px!important;
+    }
+}
