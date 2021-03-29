@@ -41,7 +41,6 @@ class Form extends React.Component {
     
     axios.post(process.env.REACT_APP_URL_API_PRODUCAO, { name, email, telefone, message })
       .then(result => {
-        console.log('Request success: ' + result);
         swal.fire({
           title: 'Mensagem enviada com sucesso!',
           text: 'Logo em breve entraremos em contato!',
@@ -51,13 +50,12 @@ class Form extends React.Component {
         });
 
       }).catch(error => {
-        console.error('Request Error: ' + error);
         swal.fire({
           title: 'Não foi possível enviar a Mensagem!',
           text: 'Entre em contato pelos nossos telefones.',
           type: 'error',
           showConfirmButton: false,
-          timer: 2500
+          timer: 3500
         });
       })
 

@@ -24,45 +24,32 @@ class CardGallery extends Component {
     render() {
 
         const { photoIndex, isOpen } = this.state;
+        const imageIdToNotShowInThumbnail = 6;
 
         return (
             <section className="gallery-block cards-gallery">
                 <div className="container">
                     <div className="heading">
                         <h2 className="h2-titulo">Serviços Disponíveis</h2>
-                        <div className="titulo-descricao">Quartos  |  Enfermarias  |  Suites  |  Mensal  |  Diárias  |  Fins de Semana</div>
+                        <div className="titulo-descricao">
+                            <h5>Quartos  |  Enfermarias  |  Suites  |  Mensal  |  Diárias  |  Fins de Semana</h5>
+                        </div>
+                        <h6>Clique em qualquer imagem para ampliar</h6>
                     </div>
                     <div className="row">
-                        <div className="col-md-6 col-lg-4">
-                            <div className="card border-0 transform-on-hover">                               
-                                    <img src={images[0]} onClick={() => this.setState({ isOpen: true, photoIndex: 0 })} alt='Nosso Espaço' className="card-img-top"></img>
-                            </div>
-                        </div>
-                        <div className="col-md-6 col-lg-4">
-                            <div className="card border-0 transform-on-hover">
-                                <img src={images[1]} onClick={() => this.setState({ isOpen: true, photoIndex: 1 })} alt='Nosso Espaço' className="card-img-top"></img>
-                            </div>
-                        </div>
-                        <div className="col-md-6 col-lg-4">
-                            <div className="card border-0 transform-on-hover">                                
-                                    <img src={images[2]} onClick={() => this.setState({ isOpen: true, photoIndex: 2 })} alt='Nosso Espaço' className="card-img-top"></img>                                
-                            </div>
-                        </div>
-                        <div className="col-md-6 col-lg-4">
-                            <div className="card border-0 transform-on-hover">                             
-                                    <img src={images[3]} onClick={() => this.setState({ isOpen: true, photoIndex: 3 })} alt='Nosso Espaço' className="card-img-top"></img>
-                            </div>
-                        </div>
-                        <div className="col-md-6 col-lg-4">
-                            <div className="card border-0 transform-on-hover">
-                                    <img src={images[4]} onClick={() => this.setState({ isOpen: true, photoIndex: 4 })} alt="Nosso Espaço" className="card-img-top"></img>
-                            </div>
-                        </div>
-                        <div className="col-md-6 col-lg-4">
-                            <div className="card border-0 transform-on-hover">
-                                    <img src={images[7]} onClick={() => this.setState({ isOpen: true, photoIndex: 7 })} alt="Nosso Espaço" className="card-img-top"></img>
-                            </div>
-                        </div>
+                        {images.map((img, index) => {
+                            if (index !== imageIdToNotShowInThumbnail) {
+                                return (
+                                    <div key={index} className="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                                        <div className="card border-0 transform-on-hover">
+                                            <img src={img} onClick={() => this.setState({ isOpen: true, photoIndex: index })} alt='Nosso Espaço' className="thumbnail-gallery card-img-top"></img>
+                                        </div>
+                                    </div>
+                                )
+                            }
+
+                            return null;
+                        })}                   
                     </div>
 
                     {isOpen && (
