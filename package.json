@@ -11,7 +11,7 @@
     "@fortawesome/react-fontawesome": "0.0.18",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
-    "firebase": "^6.6.2",
+    "firebase": "^10.9.0",
     "font-awesome": "^4.7.0",
     "google-maps-react": "^2.0.6",
     "jquery": "^3.6.0",
