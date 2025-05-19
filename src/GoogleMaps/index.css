@@ -3,14 +3,17 @@
     height: 400px;        
 }
 
-.map-marker-label {
-    color: #000;
-    background-color: white;
-    padding: 8px 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    font-size: 12px;
-    white-space: nowrap;
-    transform: translateY(-110%);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.info-window-content {
+    margin: 0;    
+    max-width: 400px;
+}
+
+.info-window-content p {
+    margin: 1px 0;
+    font-size: 13px;
+    color: #666;
+}
+
+.info-window-content strong {
+    color: #333;
 }
