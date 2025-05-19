@@ -81,8 +81,8 @@ class Form extends React.Component {
           </div>
 
           <div className="form-buttons">
-            <button type="submit" className="btn btn-primary">Enviar</button>            
-            <button type="reset" className="btn btn-default">Limpar</button>
+            <button type="submit" className="btn-custom btn-primary">Enviar</button>            
+            <button type="reset" className="btn-custom btn-default">Limpar</button>
           </div>
         </div>
       </form>

@@ -7,3 +7,23 @@
         max-width: 1300px!important;
     }
 }
+
+/* Correção para os indicadores do carousel */
+.carousel-indicators {
+    list-style-type: none !important;
+    margin-bottom: 1rem !important;
+}
+
+.carousel-indicators [data-mdb-target] {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50% !important;
+    background-color: #fff !important;
+    margin: 0 4px !important;
+    opacity: 0.5 !important;
+    transition: opacity 0.3s ease !important;
+}
+
+.carousel-indicators .active {
+    opacity: 1 !important;
+}

@@ -1,5 +1,12 @@
 .container-navbar {
     margin-top: 0px!important;
+    
+}
+
+@media (min-width: 1200px) {
+    .container-navbar {
+        max-width: 1140px!important;
+    }
 }
 
 .navbar-brand {
@@ -12,13 +19,18 @@
     font-weight: thin;
     font-size: 1.1rem!important;
     font-family: 'Roboto', sans-serif;
+    justify-content: end;
 }
 
 .dropdown-item:hover {
     background-color: #ffb74d!important;
 }
+    
+@media (max-width: 768px) {    
+    .nav-link {
+        text-align: right;
+    }
 
-@media (max-width: 576px) {
     .navbar-brand {
         font-weight: bold;
         font-size: 0rem!important;
@@ -33,4 +45,40 @@
 
 .fixed-top {
     z-index: 999!important;
+}
+
+.navbar-custom {
+    background-color: #ffb74d;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: white !important;
+}
+
+.navbar-custom .navbar-toggler {
+    color: white !important;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 0.25rem;
+    color: white !important;
+}
+
+.navbar-toggler:hover {
+    background-color: rgba(255,255,255,.1);
+}
+
+.navbar-toggler-icon {
+    color: white;
 }

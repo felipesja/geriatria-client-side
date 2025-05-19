@@ -6,7 +6,7 @@ class ContactForm extends React.Component {
 
   render() {
     return (
-      <div className="container text-center">
+      <div className="container custom-container text-center">
         <h2 className="h2-titulo">Contato</h2>
         <div className="titulo-descricao">
           Entre em contato utilizando o formulário abaixo ou pelo nosso&nbsp;

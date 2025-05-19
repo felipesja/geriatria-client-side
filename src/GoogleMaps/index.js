@@ -1,80 +1,48 @@
-import React, { Component } from 'react';
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
+import React, { useMemo } from 'react';
+import { GoogleMap, useLoadScript, MarkerF } from '@react-google-maps/api';
 import './index.css';
 
-const style = {
-    width: '100%',
-    height: '100%',
-}
+const center = {
+    lat: -22.908396,
+    lng: -43.294953
+};
 
-const containerStyle = {
-    width: '100%',
-    height: '400px',
-    position: 'relative'
-}
+const mapOptions = {
+    disableDefaultUI: false,
+    clickableIcons: true,
+    scrollwheel: true,
+};
 
-export class MapContainer extends Component {
+function GoogleMaps() {
+    const { isLoaded, loadError } = useLoadScript({
+        googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+        version: "weekly"
+    });
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            showingInfoWindow: false,
-            activeMarker: {},
-            selectedPlace: {},
-            center: { lat: -22.9085527, lng: -43.2823285 }
-        };
-    }
-
-    componentDidMount() {
-        window.addEventListener('load', this.onMarkerClick);
-        window.addEventListener('resize', this.setMapCenter);
-    }
-
-    onMarkerClick = (props, marker, e) =>
-        this.setState({
-            selectedPlace: props,
-            activeMarker: marker,
-            showingInfoWindow: true
-        });
-
-    onInfoWindowClose = () =>
-        this.setState({
-            showingInfoWindow: false,
-            activeMarker: null
-        });
-
-    setMapCenter = () => {
-        // pull out latitude longitude from wherever you're getting it from
-        this.setState({ center: { lat: -22.9085527, lng: -43.2823285 } });
-    };
-
-    render() {
+    const renderMap = useMemo(() => {
         return (
-            <Map google={this.props.google}
-                zoom={15}
-                style={style}
-                containerStyle={containerStyle}
-                initialCenter={this.state.center}
-                center={this.state.center}
+            <GoogleMap
+                zoom={16}
+                center={center}
+                mapContainerClassName="map-container"
+                options={mapOptions}
             >
-                <Marker onClick={this.onMarkerClick} name={'Lar Geriátrico Coração de Mária'} />
-                <InfoWindow
-                    marker={this.state.activeMarker}
-                    visible={this.state.showingInfoWindow}
-                    onClose={this.onInfoWindowClose}
-                    position={{ lat: -22.907070, lng: -43.282330 }} >
-                    <div>
-                        <strong>Endereço: </strong>R. Joaquim Meier, 854 - Lins de Vasconcelos<br></br>
-                        <strong>Telefone: </strong> (21)3899-9938<br></br>
-                        <strong>Funcionamento: </strong> 8:30 - 19:00 Horas
-                    </div>
-                </InfoWindow>
-            </Map>
+                <MarkerF
+                    position={center}
+                    title="Lar Geriátrico Coração de Maria"
+                />
+            </GoogleMap>
         );
-    }
+    }, []);
+
+    if (loadError) return <div>Erro ao carregar o mapa</div>;
+    if (!isLoaded) return <div>Carregando...</div>;
+
+    return (
+        <>
+            {renderMap}
+        </>
+    );
 }
 
-export default GoogleApiWrapper({
-    apiKey: (process.env.REACT_APP_GOOGLE_MAPS_API_KEY),
-    language: ("pt-BR")
-})(MapContainer)
+export default GoogleMaps;
