@@ -12,35 +12,6 @@
     font-size: 17px;
 }
 
-.whatsapp-container {
-    position: fixed;
-    width: 54px;
-    height: 54px;
-    bottom: 80px;
-    right: 20px;
-    background-color: #25d366;
-    color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 40px;
-    z-index: 100;
-}
-
-.whatsapp-container:hover {
-    color: #fff;
-}
-
-.whatsapp-icon {
-    margin-top: 1px;
-    margin-left: 1px;
-    padding: 6px;
-    transition: transform 1s;
-}
-
-.whatsapp-icon:hover {
-    transform: rotate(360deg);
-}
-
 .custom-container {
     max-width: 1140px !important;
     width: 100%;

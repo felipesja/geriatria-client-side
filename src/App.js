@@ -26,16 +26,6 @@ function App() {
         </section>
         <Footer />
       </div>
-      <div>
-        <a 
-          href="https://api.whatsapp.com/send?phone=5521993960900&text=Ol%C3%A1,%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es" 
-          rel="noopener noreferrer" 
-          className="whatsapp-container" 
-          target="_blank"
-        >
-          <i className="fa fa-whatsapp whatsapp-icon"></i>
-        </a>
-      </div>
     </Router>
   );
 }

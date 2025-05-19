@@ -19,10 +19,6 @@ function FooterPage() {
                                 (21) 3899-9938 | (21) 2597-5999
                             </li>
                             <li className="list-unstyled">
-                                <i className="fab fa-whatsapp"></i>
-                                (21) 993960900
-                            </li>
-                            <li className="list-unstyled">
                                 <i className="fas fa-envelope"></i>
                                 largeriatricocoracaodemaria@yahoo.com.br
                             </li>
