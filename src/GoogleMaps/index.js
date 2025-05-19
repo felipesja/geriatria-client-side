@@ -1,10 +1,10 @@
 import React, { useMemo } from 'react';
-import { GoogleMap, useLoadScript, MarkerF } from '@react-google-maps/api';
+import { GoogleMap, useJsApiLoader, MarkerF } from '@react-google-maps/api';
 import './index.css';
 
 const center = {
-    lat: -22.908396,
-    lng: -43.294953
+    lat: -22.908220891703593,
+    lng: -43.28237361618256
 };
 
 const mapOptions = {
@@ -14,9 +14,9 @@ const mapOptions = {
 };
 
 function GoogleMaps() {
-    const { isLoaded, loadError } = useLoadScript({
-        googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
-        version: "weekly"
+    const { isLoaded, loadError } = useJsApiLoader({
+        id: 'google-map-script',
+        googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY        
     });
 
     const renderMap = useMemo(() => {
@@ -29,7 +29,11 @@ function GoogleMaps() {
             >
                 <MarkerF
                     position={center}
-                    title="Lar Geriátrico Coração de Maria"
+                    label={{
+                        text: "Lar Geriátrico Coração de Maria",
+                        className: "map-marker-label",
+                        anchor: new google.maps.Point(0, 0)
+                    }}
                 />
             </GoogleMap>
         );
