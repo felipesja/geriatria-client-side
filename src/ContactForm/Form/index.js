@@ -19,25 +19,24 @@ function Form() {
     }
 
     const handleSubmit = (e) => {
-        // get our form data out of state
-        const name = e.target.name.value
-        const telefone = e.target.telefone.value
-        const email = e.target.email.value
-        const message = e.target.message.value
+        const name = e.target.name.value;
+        const telefone = e.target.telefone.value;
+        const email = e.target.email.value;
+        const message = e.target.message.value;
 
         swal.fire({
             title: 'Enviando...',
-            onOpen: () => {
-                swal.showLoading()
+            didOpen: () => {
+                swal.showLoading();
             }
-        })
+        });
 
         axios.post(process.env.REACT_APP_URL_API_PRODUCAO, { name, email, telefone, message })
             .then(result => {
                 swal.fire({
                     title: 'Mensagem enviada com sucesso!',
                     text: 'Logo em breve entraremos em contato!',
-                    type: 'success',
+                    icon: 'success',
                     showConfirmButton: false,
                     timer: 2500
                 });
@@ -46,14 +45,14 @@ function Form() {
                 swal.fire({
                     title: 'Não foi possível enviar a Mensagem!',
                     text: 'Entre em contato pelos nossos telefones.',
-                    type: 'error',
+                    icon: 'error',
                     showConfirmButton: false,
                     timer: 3500
                 });
-            })
+            });
 
         e.preventDefault();
-    }
+    };
 
     return (
         <form className="form-horizontal" onSubmit={handleSubmit} onReset={handleFormReset}>
