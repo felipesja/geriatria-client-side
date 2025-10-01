@@ -12,10 +12,11 @@ import {
 import imgLogo from './img/Logo branco - transp teste 100.png'
 import './index.css'
 import '../hover.css'
-import { NavHashLink as NavLink } from 'react-router-hash-link';
+import { Link, useNavigate } from 'react-router-dom';
 
 function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
+    const navigate = useNavigate();
 
     const toggleCollapse = () => {
         setIsOpen(!isOpen);
@@ -30,6 +31,11 @@ function NavBar() {
         }
 
         window.scrollTo({ top: el.offsetTop - offset, behavior: 'smooth' });
+    };
+
+    // Função para rolar para o topo ao clicar em um link de página
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     return (
@@ -53,25 +59,84 @@ function NavBar() {
                 <Collapse show={isOpen} navbar>
                     <NavbarNav className="navbar-nav" right>
                         <NavItem>
-                            <NavLink
-                                smooth
-                                to="#header"
-                                scroll={el => scrollTo(el)}
-                                onClick={() => setIsOpen(false)}
+                            <Link
+                                to="/"
                                 className="nav-link hvr-underline-from-center"
+                                onClick={() => {
+                                    setIsOpen(false);
+                                    scrollToTop();
+                                }}
                                 style={{ color: 'white' }}
                             >
                                 Home
-                            </NavLink>
+                            </Link>
                         </NavItem>
                         <NavItem>
-                            <NavLink smooth to="#galeria" scroll={el => scrollTo(el)} onClick={() => setIsOpen(false)} className="nav-link hvr-underline-from-center">Serviços</NavLink>
+                            <a
+                                href="/"
+                                className="nav-link hvr-underline-from-center"
+                                onClick={e => {
+                                    e.preventDefault();
+                                    navigate('/');
+                                    setTimeout(() => {
+                                        const el = document.getElementById('galeria');
+                                        if (el) window.scrollTo({ top: el.offsetTop - 90, behavior: 'smooth' });
+                                    }, 100);
+                                    setIsOpen(false);
+                                }}
+                                style={{ color: 'white' }}
+                            >
+                                Serviços
+                            </a>
                         </NavItem>
                         <NavItem>
-                            <NavLink smooth to="#contato" scroll={el => scrollTo(el)} onClick={() => setIsOpen(false)} className="nav-link hvr-underline-from-center">Contato</NavLink>
+                            <a
+                                href="/"
+                                className="nav-link hvr-underline-from-center"
+                                onClick={e => {
+                                    e.preventDefault();
+                                    navigate('/');
+                                    setTimeout(() => {
+                                        const el = document.getElementById('contato');
+                                        if (el) window.scrollTo({ top: el.offsetTop - 120, behavior: 'smooth' });
+                                    }, 100);
+                                    setIsOpen(false);
+                                }}
+                                style={{ color: 'white' }}
+                            >
+                                Contato
+                            </a>
                         </NavItem>
                         <NavItem>
-                            <NavLink smooth to="#googlemaps" scroll={el => scrollTo(el)} onClick={() => setIsOpen(false)} className="nav-link hvr-underline-from-center">Localização</NavLink>
+                            <a
+                                href="/"
+                                className="nav-link hvr-underline-from-center"
+                                onClick={e => {
+                                    e.preventDefault();
+                                    navigate('/');
+                                    setTimeout(() => {
+                                        const el = document.getElementById('googlemaps');
+                                        if (el) window.scrollTo({ top: el.offsetTop - 120, behavior: 'smooth' });
+                                    }, 100);
+                                    setIsOpen(false);
+                                }}
+                                style={{ color: 'white' }}
+                            >
+                                Localização
+                            </a>
+                        </NavItem>
+                        <NavItem>
+                            <Link
+                                to="/sobre"
+                                className="nav-link hvr-underline-from-center"
+                                onClick={() => {
+                                    setIsOpen(false);
+                                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                                }}
+                                style={{ color: 'white' }}
+                            >
+                                Sobre
+                            </Link>
                         </NavItem>
                     </NavbarNav>
                 </Collapse>
